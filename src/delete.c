@@ -6,7 +6,10 @@ t_stack	*ft_pop(t_stack **stack)
 		return NULL;
 	t_stack *temp = *stack;
 	*stack = temp->next;
+	if(*stack)
+		(*stack)->prev = NULL;
 	temp->next=NULL;
+	temp->prev = NULL;
 	return (temp);
 }
 

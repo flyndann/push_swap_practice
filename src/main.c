@@ -16,7 +16,7 @@ int	main(int argc, char **argv)
 	ft_print_stack(stack_a);
 	ft_print_stack(stack_b);
 
-	ft_pop(&stack_a);
+	sa(&stack_a);
 	ft_printf("________________\n");
 	ft_print_stack(stack_a);
 	

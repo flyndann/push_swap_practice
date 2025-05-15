@@ -34,3 +34,29 @@ void	ft_prepend_node(t_stack **stack, t_stack *new_node)
 		*stack = new_node;
 	}
 }
+
+void	ft_push(t_stack **stack, t_stack *new_node)
+{
+	if(!new_node)
+		return;
+	new_node->next = *stack;
+	new_node->prev = NULL;
+	if(*stack)
+	{
+		new_node->head = (*stack)->head;
+		new_node->tail=(*stack)->tail;
+		(*stack)->prev = new_node;
+		t_stack	*current = new_node;
+		while(current)
+		{
+			current->head = new_node;
+			current = current->next;
+		}
+	}
+	else
+	{
+		new_node->head = new_node;
+		new_node->tail = new_node;
+	}
+	*stack = new_node;
+}

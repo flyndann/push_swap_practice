@@ -40,4 +40,13 @@ void    ft_append_node(t_stack **stack, t_stack *new_node);
 t_stack *ft_fill_stack(char *arg);
 void    ft_print_stack(t_stack *stack);
 t_stack *ft_pop(t_stack **stack);
+void    ft_push(t_stack **stack, t_stack *new_node);
+int     ft_stack_size(t_stack *stack);
+int     ft_is_sorted(t_stack *stack);
+void 	pb(t_stack **stack_a, t_stack **stack_b);
+void	pa(t_stack **stack_a, t_stack **stack_b);
+void    swap(t_stack **stack);
+void    sa(t_stack **stack_a);
+void    sb(t_stack **stack_b);
+
 #endif
