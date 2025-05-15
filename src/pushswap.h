@@ -56,4 +56,9 @@ void    reverse(t_stack **stack);
 void    rra(t_stack **stack_a);
 void	rrb(t_stack **stack_b);
 void	rrr(t_stack **stack_a, t_stack **stack_b);
+int     ft_is_hogback(t_stack *stack);
+void    sort_three(t_stack **stack);
+void	single_case(t_stack **);
+int     ft_is_reversed(t_stack *stack);
+char    *ft_join_args(int argc, char **argv);
 #endif

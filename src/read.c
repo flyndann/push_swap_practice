@@ -34,9 +34,38 @@ int	ft_is_sorted(t_stack *stack)
 		return 1;
 	while(stack->next)
 	{
-		if(stack->num >stack->next->num)
+		if(stack->num > stack->next->num)
 			return 0;
 	stack = stack->next;
 	}
 	return 1;
+}
+
+int	ft_is_reversed(t_stack *stack)
+{
+	if(!stack)
+		return 1;
+	while(stack->next)
+	{
+		if(stack->num < stack->next->num)
+			return 0;
+	stack = stack->next;
+	}
+	return 1;
+
+}
+
+int	ft_is_hogback(t_stack *stack)
+{
+
+	if(!stack||!stack->next||!stack->next->next)
+                return 0;
+	int a = stack->num;
+	int b = stack->next->num;
+	int c = stack->next->next->num;
+	if(b > c && b > a && a < c)
+		return 1;
+	else
+		return 0;
+	
 }

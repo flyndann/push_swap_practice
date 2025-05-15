@@ -1,3 +1,5 @@
+#include "pushswap.h"
+
 void	rotate(t_stack **stack)
 {
 	if(!stack || !*stack || !(*stack)->next)

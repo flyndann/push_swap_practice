@@ -1,3 +1,5 @@
+#include "pushswap.h"
+
 void	reverse(t_stack **stack)
 {
 	if(!stack || !*stack || !(*stack)->next)
